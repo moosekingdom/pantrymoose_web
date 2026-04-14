@@ -10,8 +10,6 @@
     :root {
       --page-bg: #f7f1e8;
       --page-bg-bottom: #efe7dc;
-      --stone-100: #f5f5f4;
-      --stone-200: #e7e5e4;
       --stone-300: #d6d3d1;
       --stone-400: #a8a29e;
       --stone-500: #78716c;
@@ -22,9 +20,6 @@
       --orange-500: #ff5b00;
       --orange-400: #ffaa33;
       --orange-600: #e04800;
-      --green-100: #d1fae5;
-      --amber-100: #fef3c7;
-      --amber-300: #fde68a;
       --card-shadow: 0 24px 80px -48px rgba(41, 37, 36, 0.38);
       --section-shadow: 0 24px 70px -52px rgba(41, 37, 36, 0.22);
       --font-sans: "Segoe UI", "Avenir Next", "Helvetica Neue", sans-serif;
@@ -262,17 +257,12 @@
     .hero-grid,
     .marketing-device-strip,
     .marketing-device-row,
-    .marketing-details-grid,
     .marketing-feature-intro,
-    .marketing-feature-card-grid,
     .marketing-footer-main,
     .marketing-footer-lead,
     .marketing-cta-points,
     .marketing-story-grid,
-    .marketing-mode-grid,
-    .marketing-proof-grid,
-    .marketing-fit-grid,
-    .marketing-report-grid {
+    .marketing-proof-grid {
       display: grid;
     }
 
@@ -284,7 +274,6 @@
 
     .hero-headline,
     .marketing-device-headline,
-    .marketing-detail-headline,
     .marketing-feature-headline,
     .marketing-footer-headline {
       margin-top: 1rem;
@@ -301,8 +290,7 @@
       line-height: 1.08;
     }
 
-    .marketing-device-headline,
-    .marketing-detail-headline {
+    .marketing-device-headline {
       max-width: 36rem;
       font-size: 2.4rem;
     }
@@ -319,7 +307,6 @@
 
     .hero-sub,
     .marketing-device-sub,
-    .marketing-detail-sub,
     .marketing-feature-intro__summary,
     .marketing-footer-sub {
       color: var(--stone-600);
@@ -337,7 +324,6 @@
       font-size: 0.96rem;
     }
 
-    .marketing-detail-sub,
     .marketing-feature-intro__summary,
     .marketing-footer-sub {
       max-width: 36rem;
@@ -367,7 +353,6 @@
       background: linear-gradient(135deg, rgba(239, 125, 87, 0.16), rgba(47, 128, 237, 0.15));
     }
 
-    .marketing-window,
     .marketing-feature-panel {
       position: relative;
       border-radius: 1.8rem;
@@ -379,184 +364,11 @@
       overflow: hidden;
     }
 
-    .marketing-window__header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      padding: 0.85rem 1rem;
-      border-bottom: 1px solid rgba(231, 229, 228, 0.95);
-    }
-
-    .marketing-window__header-eyebrow {
-      color: var(--stone-400);
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.24em;
-      text-transform: uppercase;
-    }
-
-    .marketing-window__header-title {
-      margin-top: 0.25rem;
-      color: var(--stone-900);
-      font-size: 1.05rem;
-      font-weight: 600;
-    }
-
-    .marketing-window__badge {
-      padding: 0.48rem 0.85rem;
-      border-radius: 9999px;
-      color: #047857;
-      background: var(--green-100);
-      font-size: 0.78rem;
-      font-weight: 700;
-    }
-
-    .marketing-hero-stack {
-      display: grid;
-      gap: 0.65rem;
-      padding: 1rem;
-    }
-
-    .marketing-preview-shell {
-      display: grid;
-      gap: 0.6rem;
-      padding: 0.7rem;
-      border: 1px solid rgba(214, 211, 209, 0.75);
-      border-radius: 1.1rem;
-      background: linear-gradient(180deg, #fcfbf8, #f7f3ea);
-      box-shadow: inset 0 1px rgba(255, 255, 255, 0.65);
-    }
-
-    .marketing-preview-dashboard-head {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      padding: 0.05rem 0.05rem 0.15rem;
-    }
-
-    .marketing-preview-dashboard__title {
-      color: var(--stone-900);
-      font-size: 1.3rem;
-      font-weight: 700;
-      letter-spacing: -0.04em;
-    }
-
-    .marketing-preview-dashboard__meta {
-      color: var(--stone-400);
-      font-size: 0.8rem;
-    }
-
-    .marketing-preview-panels {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 0.55rem;
-    }
-
-    .marketing-preview-panel {
-      display: flex;
-      align-items: flex-start;
-      min-height: 3.55rem;
-      padding: 0.65rem 0.75rem;
-      border-radius: 0.9rem;
-      color: #fff;
-    }
-
-    .marketing-preview-panel--blue { background: linear-gradient(135deg, #3b82f6, #4f8fe9); }
-    .marketing-preview-panel--orange { background: linear-gradient(135deg, #ff5b00, #ff6c1e); }
-    .marketing-preview-panel--green { background: linear-gradient(135deg, #0f9f67, #17b06f); }
-    .marketing-preview-panel--violet { background: linear-gradient(135deg, #635bff, #8b33ff); }
-    .marketing-preview-panel--stone { background: linear-gradient(180deg, #e7e3de, #ddd7d1); }
-    .marketing-preview-panel--purple { background: linear-gradient(135deg, #7c3aed, #a855f7); }
-
-    .marketing-preview-panel__title {
-      white-space: nowrap;
-      font-size: 0.82rem;
-      font-weight: 700;
-    }
-
-    .marketing-preview-panel__title--dark {
-      color: var(--stone-700);
-    }
-
-    .marketing-preview-section-grid {
-      display: grid;
-      gap: 0.55rem;
-    }
-
-    .marketing-preview-section {
-      display: grid;
-      gap: 0.45rem;
-      padding: 0.6rem;
-      border-radius: 0.85rem;
-      background: rgba(255, 255, 255, 0.74);
-    }
-
-    .marketing-preview-section--soft {
-      background: #eef4ff;
-    }
-
-    .marketing-preview-section__label {
-      color: var(--stone-500);
-      font-size: 0.58rem;
-      font-weight: 700;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-    }
-
-    .marketing-preview-list {
-      display: grid;
-      gap: 0.35rem;
-    }
-
-    .marketing-preview-list__row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      padding: 0.56rem 0.7rem;
-      border: 1px solid rgba(214, 211, 209, 0.75);
-      border-radius: 0.75rem;
-      background: #fff;
-      color: #292524;
-      font-size: 0.8rem;
-      font-weight: 600;
-    }
-
-    .marketing-preview-list__row > span:first-child {
-      white-space: nowrap;
-    }
-
-    .marketing-preview-pill {
-      padding: 0.3rem 0.6rem;
-      border: 1px solid rgba(214, 211, 209, 0.75);
-      border-radius: 9999px;
-      background: var(--stone-100);
-      color: var(--stone-600);
-      white-space: nowrap;
-      font-size: 0.64rem;
-      font-weight: 700;
-    }
-
-    .marketing-preview-pill--gold {
-      background: var(--amber-100);
-      border-color: var(--amber-300);
-      color: #d97706;
-    }
-
-    .marketing-preview-pill--orange {
-      background: #ff5b00;
-      border-color: #ff8a4c;
-      color: #fff;
-    }
-
     .marketing-section-shell,
     .marketing-report-shell,
     .marketing-story-card,
     .marketing-mode-card,
-    .marketing-proof-card,
-    .marketing-fit-card {
+    .marketing-proof-card {
       border: 1px solid rgba(214, 211, 209, 0.82);
       border-radius: 1.6rem;
       background: rgba(255, 255, 255, 0.9);
@@ -581,16 +393,12 @@
 
     .marketing-device-strip,
     .marketing-device-row,
-    .marketing-details-grid,
     .marketing-feature-intro,
     .marketing-footer-main,
     .marketing-footer-lead,
     .marketing-cta-points,
     .marketing-story-grid,
-    .marketing-mode-grid,
-    .marketing-proof-grid,
-    .marketing-fit-grid,
-    .marketing-report-grid {
+    .marketing-proof-grid {
       gap: 1rem;
     }
 
@@ -648,9 +456,7 @@
     .marketing-device-card__title,
     .marketing-story-title,
     .marketing-mode-title,
-    .marketing-proof-title,
-    .marketing-fit-title,
-    .marketing-report-row__title {
+    .marketing-proof-title {
       margin-top: 0.3rem;
       color: var(--stone-900);
       font-size: 1rem;
@@ -695,42 +501,9 @@
       background: var(--blue-500);
     }
 
-    .marketing-detail-card {
-      padding: 1.45rem;
-    }
-
-    .marketing-detail-card__header {
-      display: flex;
-      align-items: center;
-      gap: 0.85rem;
-    }
-
-    .marketing-detail-card__icon {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 2.4rem;
-      height: 2.4rem;
-      flex-shrink: 0;
-      border: 1px solid rgba(214, 211, 209, 0.7);
-      border-radius: 0.85rem;
-      background: rgba(255, 255, 255, 0.92);
-      color: var(--stone-700);
-    }
-
-    .marketing-detail-card__title {
-      color: var(--stone-900);
-      font-size: 1.5rem;
-      font-weight: 600;
-      letter-spacing: -0.03em;
-    }
-
-    .marketing-detail-card__body,
     .marketing-story-copy,
     .marketing-mode-copy,
-    .marketing-proof-copy,
-    .marketing-fit-copy,
-    .marketing-report-row__copy {
+    .marketing-proof-copy {
       margin-top: 0.55rem;
       color: var(--stone-600);
       font-size: 0.96rem;
@@ -739,8 +512,7 @@
 
     .marketing-story-card,
     .marketing-mode-card,
-    .marketing-proof-card,
-    .marketing-fit-card {
+    .marketing-proof-card {
       padding: 1.3rem;
     }
 
@@ -758,7 +530,6 @@
     }
 
     .marketing-mode-badge,
-    .marketing-report-metric,
     .marketing-report-caption {
       display: inline-flex;
       align-items: center;
@@ -796,56 +567,6 @@
       border: 1px solid rgba(214, 211, 209, 0.82);
       background: #fafaf9;
       color: var(--stone-600);
-    }
-
-    .marketing-report-row {
-      display: grid;
-      gap: 0.65rem;
-      padding: 1rem;
-      border: 1px solid rgba(214, 211, 209, 0.78);
-      border-radius: 1.2rem;
-      background: rgba(255, 255, 255, 0.92);
-    }
-
-    .marketing-report-metrics {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.55rem;
-    }
-
-    .marketing-report-metric {
-      padding: 0.5rem 0.72rem;
-      background: #f5f5f4;
-      color: var(--stone-700);
-      letter-spacing: 0.06em;
-    }
-
-    .marketing-feature-tile-grid {
-      display: grid;
-      gap: 0.9rem;
-      margin-top: 1.7rem;
-    }
-
-    .marketing-feature-tile {
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-      padding: 1rem 1.05rem;
-      border: 1px solid rgba(214, 211, 209, 0.8);
-      border-radius: 1.25rem;
-      background: #faf8f3;
-      color: #292524;
-      font-size: 1rem;
-      font-weight: 600;
-    }
-
-    .marketing-feature-tile__dot {
-      width: 0.7rem;
-      height: 0.7rem;
-      flex: none;
-      border-radius: 9999px;
-      background: linear-gradient(135deg, #3b82f6, #60a5fa);
-      box-shadow: 0 0 0 0.3rem rgba(147, 197, 253, 0.22);
     }
 
     .marketing-footer {
@@ -902,20 +623,6 @@
       width: 1px;
       height: 1px;
       overflow: hidden;
-    }
-
-    .marketing-demo-note {
-      padding-top: 0.2rem;
-      color: var(--stone-600);
-      font-size: 0.95rem;
-    }
-
-    .marketing-demo-note a {
-      color: var(--stone-700);
-      font-weight: 600;
-      text-decoration: underline;
-      text-decoration-color: rgba(214, 211, 209, 0.9);
-      text-underline-offset: 4px;
     }
 
     .marketing-cta-note {
@@ -1005,14 +712,7 @@
         align-items: start;
       }
 
-      .marketing-details-grid {
-        grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
-        align-items: start;
-      }
-
-      .marketing-feature-card-grid,
       .marketing-story-grid,
-      .marketing-mode-grid,
       .marketing-proof-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
@@ -1021,11 +721,6 @@
         grid-template-columns: minmax(0, 1.05fr) minmax(18rem, 0.95fr);
         align-items: center;
         gap: 1.75rem 2.4rem;
-      }
-
-      .marketing-feature-tile-grid,
-      .marketing-fit-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
       }
 
       .marketing-footer-main {
@@ -1061,13 +756,12 @@
         font-size: 1.15rem;
       }
 
-      .marketing-device-headline,
-      .marketing-detail-headline {
+      .marketing-device-headline {
         font-size: 3.1rem;
       }
 
       .marketing-feature-headline {
-        font-size: 3.2rem;
+        font-size: 2.5rem;
       }
 
       .marketing-footer-headline {
@@ -1118,29 +812,125 @@
         line-height: 1.5;
       }
 
-      .marketing-preview-dashboard-head {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.2rem;
-      }
-
-      .marketing-preview-panels {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 540px) {
-      .marketing-feature-card-grid,
-      .marketing-feature-tile-grid,
-      .marketing-fit-grid {
-        grid-template-columns: 1fr;
-      }
     }
 
     @media (max-width: 479px) {
       .marketing-header-nav {
         display: none;
       }
+    }
+
+    /* ── Screenshot frame ── */
+    .marketing-screenshot-frame {
+      position: relative;
+      border-radius: 1.1rem;
+      border: 1px solid rgba(214, 211, 209, 0.85);
+      background: #fff;
+      box-shadow: var(--card-shadow);
+      overflow: hidden;
+    }
+
+    .marketing-screenshot-bar {
+      display: flex;
+      align-items: center;
+      gap: 0.38rem;
+      padding: 0.58rem 0.85rem;
+      border-bottom: 1px solid rgba(231, 229, 228, 0.95);
+      background: #f8f6f2;
+    }
+
+    .marketing-screenshot-bar__dot {
+      width: 0.48rem;
+      height: 0.48rem;
+      flex: none;
+      border-radius: 9999px;
+      background: rgba(200, 196, 192, 0.95);
+    }
+
+    .marketing-screenshot-frame img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    /* ── Feature screens grid ── */
+    .marketing-screens-grid {
+      display: grid;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    @media (min-width: 768px) {
+      .marketing-screens-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    .marketing-screen-card {
+      display: grid;
+      gap: 0.85rem;
+    }
+
+    .marketing-screen-card__label {
+      color: var(--stone-500);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+
+    .marketing-screen-card__title {
+      margin-top: 0.2rem;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--stone-900);
+      letter-spacing: -0.02em;
+    }
+
+    .marketing-screen-card__copy {
+      margin-top: 0.2rem;
+      font-size: 0.88rem;
+      color: var(--stone-600);
+      line-height: 1.65;
+    }
+
+    /* ── Mode section split ── */
+    .marketing-mode-visual {
+      display: grid;
+      gap: 2rem;
+      align-items: start;
+      margin-top: 1.7rem;
+    }
+
+    .marketing-mode-image {
+      max-width: 200px;
+      justify-self: center;
+    }
+
+    .marketing-mode-image .marketing-screenshot-frame {
+      border-radius: 1.6rem;
+    }
+
+    @media (min-width: 768px) {
+      .marketing-mode-visual {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 190px;
+        gap: 1.25rem;
+        align-items: start;
+      }
+
+      .marketing-mode-image {
+        max-width: 100%;
+        justify-self: center;
+      }
+    }
+
+    /* ── Reports screenshot ── */
+    .marketing-report-visual {
+      margin-top: 1.5rem;
+    }
+
+    .marketing-report-visual .marketing-screenshot-frame {
+      border-radius: 1rem;
     }
   </style>
 </head>
@@ -1162,10 +952,9 @@
 
         <nav class="marketing-header-nav" aria-label="Marketing sections">
           <a href="#top" class="marketing-header-nav__link">Overview</a>
-          <a href="#workflow" class="marketing-header-nav__link">Workflow</a>
           <a href="#modes" class="marketing-header-nav__link">Modes</a>
           <a href="#reports" class="marketing-header-nav__link">Reports</a>
-          <a href="#product" class="marketing-header-nav__link">Features</a>
+          <a href="#workflow" class="marketing-header-nav__link">How it works</a>
           <a href="#pricing" class="marketing-header-nav__link">Coming Soon</a>
           <!-- <a href="https://foodshelf-demo.vercel.app/demo" class="marketing-cta-btn marketing-cta-btn--primary marketing-header-nav__cta">Try the demo</a> -->
         </nav>
@@ -1176,120 +965,82 @@
           <div class="hero-grid">
             <div>
               <p class="marketing-section-label">Pantry Moose</p>
-              <h1 class="hero-headline">Pantry software built for real pantry work.</h1>
-              <p class="hero-sub">Check in clients, track donations, manage volunteers, record distribution weights, and run pantry reports in one simple system. Built for front desks, office staff, and pantry leaders.</p>
+              <h1 class="hero-headline">Food shelf software that feels simple from day one.</h1>
+              <p class="hero-sub">Easy to learn, full of helpful features, affordable for growing teams, and ready to use on any device. Keep check-in, donations, visits, volunteers, and reports all in one place.</p>
               <div class="hero-actions">
                 <!-- <a href="https://foodshelf-demo.vercel.app/demo" class="marketing-cta-btn marketing-cta-btn--primary">Try the demo</a> -->
               </div>
             </div>
 
             <div class="marketing-hero-panel">
-              <div class="marketing-window">
-                <div class="marketing-window__header">
-                  <div>
-                    <p class="marketing-window__header-eyebrow">Daily operations</p>
-                    <p class="marketing-window__header-title">Built for busy pantry teams</p>
-                  </div>
-                  <div class="marketing-window__badge">Ready</div>
+              <div class="marketing-screenshot-frame">
+                <div class="marketing-screenshot-bar">
+                  <span class="marketing-screenshot-bar__dot"></span>
+                  <span class="marketing-screenshot-bar__dot"></span>
+                  <span class="marketing-screenshot-bar__dot"></span>
                 </div>
-
-                <div class="marketing-hero-stack">
-                  <article class="marketing-preview-shell">
-                    <div class="marketing-preview-dashboard-head">
-                      <p class="marketing-preview-dashboard__title">Pantry Moose</p>
-                      <span class="marketing-preview-dashboard__meta">Administrator Mode</span>
-                    </div>
-
-                    <div class="marketing-preview-panels">
-                      <article class="marketing-preview-panel marketing-preview-panel--blue">
-                        <p class="marketing-preview-panel__title">Volunteers</p>
-                      </article>
-                      <article class="marketing-preview-panel marketing-preview-panel--orange">
-                        <p class="marketing-preview-panel__title">Donors</p>
-                      </article>
-                      <article class="marketing-preview-panel marketing-preview-panel--green">
-                        <p class="marketing-preview-panel__title">Clients</p>
-                      </article>
-                      <article class="marketing-preview-panel marketing-preview-panel--violet">
-                        <p class="marketing-preview-panel__title">Reports</p>
-                      </article>
-                      <article class="marketing-preview-panel marketing-preview-panel--stone">
-                        <p class="marketing-preview-panel__title marketing-preview-panel__title--dark">Categories</p>
-                      </article>
-                      <article class="marketing-preview-panel marketing-preview-panel--purple">
-                        <p class="marketing-preview-panel__title">Users</p>
-                      </article>
-                    </div>
-
-                    <div class="marketing-preview-section-grid">
-                      <div class="marketing-preview-section marketing-preview-section--soft">
-                        <p class="marketing-preview-section__label">Record food weight</p>
-                        <div class="marketing-preview-list">
-                          <div class="marketing-preview-list__row">
-                            <span>Imani Cole</span>
-                            <span class="marketing-preview-pill marketing-preview-pill--gold">Tap to record</span>
-                          </div>
-                          <div class="marketing-preview-list__row">
-                            <span>DeShawn Parker</span>
-                            <span class="marketing-preview-pill marketing-preview-pill--gold">Tap to record</span>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="marketing-preview-section">
-                        <p class="marketing-preview-section__label">Volunteers checked in</p>
-                        <div class="marketing-preview-list">
-                          <div class="marketing-preview-list__row">
-                            <span>Maya Johnson</span>
-                            <span class="marketing-preview-pill marketing-preview-pill--orange">Check out</span>
-                          </div>
-                          <div class="marketing-preview-list__row">
-                            <span>Devon Patel</span>
-                            <span class="marketing-preview-pill marketing-preview-pill--orange">Check out</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </article>
-                </div>
+                <img src="images/dashboard.png" alt="Pantry Moose dashboard showing check-in, scale, and volunteer status" width="600" height="480" />
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="workflow" class="marketing-band marketing-band--product">
+      <section class="marketing-band marketing-band--product">
         <div class="marketing-band__inner">
           <article class="marketing-feature-panel">
-            <div class="marketing-feature-intro">
-              <div class="marketing-feature-intro__headline">
-                <p class="marketing-section-label">How the day flows</p>
-                <h2 class="marketing-feature-headline">One system for the whole day.</h2>
-              </div>
-              <p class="marketing-feature-intro__summary">Pantry Moose keeps the front desk, volunteer desk, donation entry, and reporting connected so your team does not have to bounce between paper, spreadsheets, and separate tools.</p>
-            </div>
+            <p class="marketing-section-label">Every workflow covered</p>
+            <h2 class="marketing-feature-headline">Everything your team does daily, in one place.</h2>
+            <p style="margin-top: 0.8rem; max-width: 40rem; color: var(--stone-600); font-size: 1rem; line-height: 1.75;">From client check-in at the front desk to donor records and volunteer management — your whole pantry day lives in the same system.</p>
 
-            <div class="marketing-story-grid" style="margin-top: 1.7rem;">
-              <article class="marketing-story-card">
-                <span class="marketing-story-step">1</span>
-                <h3 class="marketing-story-title">Volunteers check in fast</h3>
-                <p class="marketing-story-copy">Use a simple kiosk screen to sign volunteers in and out and keep a clear view of who is helping today.</p>
-              </article>
-              <article class="marketing-story-card">
-                <span class="marketing-story-step">2</span>
-                <h3 class="marketing-story-title">Clients get checked in quickly</h3>
-                <p class="marketing-story-copy">Record household counts, notes, and visits without slowing down the front desk when the line is moving.</p>
-              </article>
-              <article class="marketing-story-card">
-                <span class="marketing-story-step">3</span>
-                <h3 class="marketing-story-title">Food weight gets recorded later</h3>
-                <p class="marketing-story-copy">Check clients in first, then record distribution weight after the visit is complete so the front desk can stay focused.</p>
-              </article>
-              <article class="marketing-story-card">
-                <span class="marketing-story-step">4</span>
-                <h3 class="marketing-story-title">Leaders review reports and trends</h3>
-                <p class="marketing-story-copy">Run reports on visits, households, pounds distributed, donations, and volunteer activity from the same system your team uses every day.</p>
-              </article>
+            <div class="marketing-screens-grid">
+              <div class="marketing-screen-card">
+                <div class="marketing-screenshot-frame">
+                  <div class="marketing-screenshot-bar">
+                    <span class="marketing-screenshot-bar__dot"></span>
+                    <span class="marketing-screenshot-bar__dot"></span>
+                    <span class="marketing-screenshot-bar__dot"></span>
+                  </div>
+                  <img src="images/clients.png" alt="Client check-in and visit tracking" width="600" height="450" />
+                </div>
+                <div>
+                  <p class="marketing-screen-card__label">Clients</p>
+                  <p class="marketing-screen-card__title">Client check-in and history</p>
+                  <p class="marketing-screen-card__copy">Record household visits and people counts quickly without slowing down the front desk line.</p>
+                </div>
+              </div>
+
+              <div class="marketing-screen-card">
+                <div class="marketing-screenshot-frame">
+                  <div class="marketing-screenshot-bar">
+                    <span class="marketing-screenshot-bar__dot"></span>
+                    <span class="marketing-screenshot-bar__dot"></span>
+                    <span class="marketing-screenshot-bar__dot"></span>
+                  </div>
+                  <img src="images/volunteers.png" alt="Volunteer sign-in and tracking" width="600" height="450" />
+                </div>
+                <div>
+                  <p class="marketing-screen-card__label">Volunteers</p>
+                  <p class="marketing-screen-card__title">Volunteer sign-in and tracking</p>
+                  <p class="marketing-screen-card__copy">Check volunteers in and out, track hours, and see who is on shift right now.</p>
+                </div>
+              </div>
+
+              <div class="marketing-screen-card">
+                <div class="marketing-screenshot-frame">
+                  <div class="marketing-screenshot-bar">
+                    <span class="marketing-screenshot-bar__dot"></span>
+                    <span class="marketing-screenshot-bar__dot"></span>
+                    <span class="marketing-screenshot-bar__dot"></span>
+                  </div>
+                  <img src="images/donors.png" alt="Donor and donation management" width="600" height="450" />
+                </div>
+                <div>
+                  <p class="marketing-screen-card__label">Donors</p>
+                  <p class="marketing-screen-card__title">Donor and donation records</p>
+                  <p class="marketing-screen-card__copy">Log donations by category, track donor history, and keep records organized without extra spreadsheets.</p>
+                </div>
+              </div>
             </div>
           </article>
         </div>
@@ -1306,7 +1057,7 @@
               <p class="marketing-feature-intro__summary">Different people need different levels of access. Pantry Moose keeps daily tasks focused while still giving leaders full management tools when they need them.</p>
             </div>
 
-            <div class="marketing-mode-grid" style="margin-top: 1.7rem;">
+            <div class="marketing-mode-visual">
               <article class="marketing-mode-card">
                 <span class="marketing-mode-badge marketing-mode-badge--blue">Kiosk Mode</span>
                 <h3 class="marketing-mode-title">Focused on front-line tasks</h3>
@@ -1327,6 +1078,11 @@
                   <li>Settings, labels, and organization management</li>
                 </ul>
               </article>
+              <div class="marketing-mode-image">
+                <div class="marketing-screenshot-frame">
+                  <img src="images/mode.png" alt="Pantry Moose mode selection screen showing Kiosk Mode and Admin Mode" width="400" height="480" />
+                </div>
+              </div>
             </div>
           </article>
         </div>
@@ -1339,47 +1095,20 @@
               <div>
                 <p class="marketing-section-label">Reports you can use</p>
                 <h2 class="marketing-device-headline">Clear pantry reporting without extra spreadsheets.</h2>
-                <p class="marketing-device-sub">Review worksheet-style reports for the numbers your pantry already needs to track. Choose a time range and focus on the report that matters right now.</p>
+                <p class="marketing-device-sub">We build custom reports for your pantry. Choose a time range and pull the numbers that matter to your team — no extra spreadsheets required.</p>
               </div>
-              <div class="marketing-report-caption">5 built-in report views</div>
+              <div class="marketing-report-caption">Custom report views</div>
             </div>
 
-            <div class="marketing-report-grid">
-              <article class="marketing-report-row">
-                <p class="marketing-report-row__title">Client Visits</p>
-                <p class="marketing-report-row__copy">Track households served by date, plus children, adults, seniors, and total people served.</p>
-                <div class="marketing-report-metrics">
-                  <span class="marketing-report-metric">Households</span>
-                  <span class="marketing-report-metric">Children</span>
-                  <span class="marketing-report-metric">Adults</span>
-                  <span class="marketing-report-metric">Seniors</span>
+            <div class="marketing-report-visual">
+              <div class="marketing-screenshot-frame">
+                <div class="marketing-screenshot-bar">
+                  <span class="marketing-screenshot-bar__dot"></span>
+                  <span class="marketing-screenshot-bar__dot"></span>
+                  <span class="marketing-screenshot-bar__dot"></span>
                 </div>
-              </article>
-              <article class="marketing-report-row">
-                <p class="marketing-report-row__title">Household Composition</p>
-                <p class="marketing-report-row__copy">See age-group breakdowns and average household size across the period you choose.</p>
-                <div class="marketing-report-metrics">
-                  <span class="marketing-report-metric">Avg Household Size</span>
-                  <span class="marketing-report-metric">Age Groups</span>
-                </div>
-              </article>
-              <article class="marketing-report-row">
-                <p class="marketing-report-row__title">Food Distribution</p>
-                <p class="marketing-report-row__copy">Review pounds distributed by visit date, including average weight per household served.</p>
-                <div class="marketing-report-metrics">
-                  <span class="marketing-report-metric">Pounds Distributed</span>
-                  <span class="marketing-report-metric">Avg Weight</span>
-                </div>
-              </article>
-              <article class="marketing-report-row">
-                <p class="marketing-report-row__title">Donations and Volunteer Activity</p>
-                <p class="marketing-report-row__copy">Track donation totals by category, plus volunteer shifts and hours served, all from the same reporting area.</p>
-                <div class="marketing-report-metrics">
-                  <span class="marketing-report-metric">Donation Categories</span>
-                  <span class="marketing-report-metric">Volunteer Hours</span>
-                  <span class="marketing-report-metric">Shift Counts</span>
-                </div>
-              </article>
+                <img src="images/reports.png" alt="Pantry Moose reporting workbook showing client visits and distribution data" width="900" height="500" />
+              </div>
             </div>
           </article>
         </div>
@@ -1438,88 +1167,38 @@
         </div>
       </section>
 
-      <section id="team" class="marketing-band marketing-band--details">
-        <div class="marketing-band__inner">
-          <article class="marketing-section-shell marketing-section-shell--details">
-            <div class="marketing-details-grid">
-              <div>
-                <p class="marketing-section-label">Who it helps</p>
-                <h2 class="marketing-detail-headline">Made for the people doing the work.</h2>
-                <p class="marketing-detail-sub">From the front desk to leadership, each part of the team can use the same system for the work right in front of them.</p>
-              </div>
-
-              <div class="marketing-feature-card-grid">
-                <article class="marketing-detail-card">
-                  <div class="marketing-detail-card__header">
-                    <div class="marketing-detail-card__icon">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle>
-                      </svg>
-                    </div>
-                    <p class="marketing-detail-card__title">Front desk staff</p>
-                  </div>
-                  <p class="marketing-detail-card__body">Move check-in along without losing track of household details.</p>
-                </article>
-                <article class="marketing-detail-card">
-                  <div class="marketing-detail-card__header">
-                    <div class="marketing-detail-card__icon">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                      </svg>
-                    </div>
-                    <p class="marketing-detail-card__title">Volunteers</p>
-                  </div>
-                  <p class="marketing-detail-card__body">Sign in quickly and stay visible throughout the day.</p>
-                </article>
-                <article class="marketing-detail-card">
-                  <div class="marketing-detail-card__header">
-                    <div class="marketing-detail-card__icon">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line>
-                      </svg>
-                    </div>
-                    <p class="marketing-detail-card__title">Office staff</p>
-                  </div>
-                  <p class="marketing-detail-card__body">Record donations, review visits, and keep daily records current.</p>
-                </article>
-                <article class="marketing-detail-card">
-                  <div class="marketing-detail-card__header">
-                    <div class="marketing-detail-card__icon">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line>
-                      </svg>
-                    </div>
-                    <p class="marketing-detail-card__title">Leadership</p>
-                  </div>
-                  <p class="marketing-detail-card__body">See service totals, donation activity, and volunteer trends in one place.</p>
-                </article>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section id="product" class="marketing-band marketing-band--product">
+      <section id="workflow" class="marketing-band marketing-band--product">
         <div class="marketing-band__inner">
           <article class="marketing-feature-panel">
             <div class="marketing-feature-intro">
               <div class="marketing-feature-intro__headline">
-                <p class="marketing-section-label">Core workflows</p>
-                <h2 class="marketing-feature-headline">The pantry-specific features your team actually needs.</h2>
+                <p class="marketing-section-label">How the day flows</p>
+                <h2 class="marketing-feature-headline">One system for the whole day.</h2>
               </div>
-              <p class="marketing-feature-intro__summary">These are not generic CRM features. They are the day-to-day tools that help a pantry serve people, track food, and keep records organized.</p>
+              <p class="marketing-feature-intro__summary">Pantry Moose keeps the front desk, volunteer desk, donation entry, and reporting connected so your team does not have to bounce between paper, spreadsheets, and separate tools.</p>
             </div>
 
-            <div class="marketing-feature-tile-grid">
-              <article class="marketing-feature-tile"><span class="marketing-feature-tile__dot" aria-hidden="true"></span><span>Volunteer kiosk check-in</span></article>
-              <article class="marketing-feature-tile"><span class="marketing-feature-tile__dot" aria-hidden="true"></span><span>Client check-in with household counts</span></article>
-              <article class="marketing-feature-tile"><span class="marketing-feature-tile__dot" aria-hidden="true"></span><span>Pending weight tracking after visits</span></article>
-              <article class="marketing-feature-tile"><span class="marketing-feature-tile__dot" aria-hidden="true"></span><span>Donation logging by food category</span></article>
-              <article class="marketing-feature-tile"><span class="marketing-feature-tile__dot" aria-hidden="true"></span><span>Donor and client history</span></article>
-              <article class="marketing-feature-tile"><span class="marketing-feature-tile__dot" aria-hidden="true"></span><span>Worksheet-style pantry reporting</span></article>
-              <article class="marketing-feature-tile"><span class="marketing-feature-tile__dot" aria-hidden="true"></span><span>Custom pantry category labels</span></article>
-              <article class="marketing-feature-tile"><span class="marketing-feature-tile__dot" aria-hidden="true"></span><span>Role-based admin tools</span></article>
-              <article class="marketing-feature-tile"><span class="marketing-feature-tile__dot" aria-hidden="true"></span><span>Multi-organization support</span></article>
+            <div class="marketing-story-grid" style="margin-top: 1.7rem;">
+              <article class="marketing-story-card">
+                <span class="marketing-story-step">1</span>
+                <h3 class="marketing-story-title">Volunteers check in fast</h3>
+                <p class="marketing-story-copy">Use a simple kiosk screen to sign volunteers in and out and keep a clear view of who is helping today.</p>
+              </article>
+              <article class="marketing-story-card">
+                <span class="marketing-story-step">2</span>
+                <h3 class="marketing-story-title">Clients get checked in quickly</h3>
+                <p class="marketing-story-copy">Record household counts, notes, and visits without slowing down the front desk when the line is moving.</p>
+              </article>
+              <article class="marketing-story-card">
+                <span class="marketing-story-step">3</span>
+                <h3 class="marketing-story-title">Food weight gets recorded later</h3>
+                <p class="marketing-story-copy">Check clients in first, then record distribution weight after the visit is complete so the front desk can stay focused.</p>
+              </article>
+              <article class="marketing-story-card">
+                <span class="marketing-story-step">4</span>
+                <h3 class="marketing-story-title">Leaders review reports and trends</h3>
+                <p class="marketing-story-copy">Run reports on visits, households, pounds distributed, donations, and volunteer activity from the same system your team uses every day.</p>
+              </article>
             </div>
           </article>
         </div>
@@ -1560,35 +1239,6 @@
         </div>
       </section>
 
-      <section class="marketing-band marketing-band--product">
-        <div class="marketing-band__inner">
-          <article class="marketing-feature-panel">
-            <div class="marketing-feature-intro">
-              <div class="marketing-feature-intro__headline">
-                <p class="marketing-section-label">Why it fits</p>
-                <h2 class="marketing-feature-headline">A better fit for pantry operations.</h2>
-              </div>
-              <p class="marketing-feature-intro__summary">Pantry Moose is designed around the actual rhythm of pantry service, not around a generic office workflow.</p>
-            </div>
-
-            <div class="marketing-fit-grid" style="margin-top: 1.7rem;">
-              <article class="marketing-fit-card">
-                <h3 class="marketing-fit-title">Built around pantry workflows</h3>
-                <p class="marketing-fit-copy">Client visits, household counts, food weight, donations, and volunteers all live in one connected system.</p>
-              </article>
-              <article class="marketing-fit-card">
-                <h3 class="marketing-fit-title">Easy for occasional users</h3>
-                <p class="marketing-fit-copy">Front-line screens stay simple enough for staff and volunteers who do not use the system all day long.</p>
-              </article>
-              <article class="marketing-fit-card">
-                <h3 class="marketing-fit-title">Ready for leadership too</h3>
-                <p class="marketing-fit-copy">When it is time to review service numbers, pounds distributed, or volunteer activity, the reporting is already there.</p>
-              </article>
-            </div>
-          </article>
-        </div>
-      </section>
-
       <footer id="pricing" class="marketing-footer">
         <div class="marketing-footer-shell">
           <div class="marketing-footer-main">
@@ -1611,7 +1261,7 @@
 
             <div class="marketing-cta-note">
               <p class="marketing-cta-note__eyebrow">What to expect</p>
-              <div class="marketing-cta-points">
+              <div class="marketing-cta-points" style="margin-top: 1rem;">
                 <p>Flat-rate pricing with no per-user fees.</p>
                 <p>Simple and quick onboarding.</p>
                 <p>Built specifically for pantry operations.</p>
